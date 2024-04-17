@@ -1,0 +1,63 @@
+.watch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 600px;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin-inline: auto;
+  margin-block: 30px;
+  padding: 30px;
+  gap: 40px;
+
+  font-family: monospace;
+
+  .displayTime {
+    font-size: 5rem;
+    line-height: 4rem;
+    color: rgb(0, 163, 0);
+    padding: 20px;
+    border-radius: 30px;
+    /* background-color: rgb(54, 54, 54); */
+    background: linear-gradient(to bottom, rgb(54, 54, 54) 45%, darkgreen 55%) top / 100% 5px;
+
+    animation: bg-pan 5s linear infinite;
+  }
+
+  .btnWrapper {
+    display: flex;
+    width: 400px;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .watchBtn {
+    padding: 10px 20px;
+    margin: 0;
+    flex-basis: 100%;
+    border: 2px solid black;
+    border-radius: 5px;
+
+    font-family: monospace;
+  }
+}
+
+.watchBtn:nth-child(1) {
+  background-color: darkgreen;
+}
+.watchBtn:nth-child(2) {
+  background-color: darkred;
+}
+.watchBtn:nth-child(3) {
+  background-color: darkblue;
+}
+
+@keyframes bg-pan {
+  from {
+    background-position: 0 0%;
+  }
+
+  to {
+    background-position: 0 100%;
+  }
+}

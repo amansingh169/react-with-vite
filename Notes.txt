@@ -1,0 +1,104 @@
+# React hook =  special fxn that allows functional components  
+              to use React features without writing class components (React v16.8)  
+              (useState, useEffect, useContext, useReducer, useCallback, and more...)  
+
+# useState() =  React hook that allows the creation of a stateful variable  
+              AND a setter function to update its value in the Virtual DOM.  
+              [name, setwame]
+
+# useEffect() = React Hook that tells react to DO SOME CODE WHEN (pick one):
+              This component Re-renders
+              This component Mounts
+              The state of a value changes
+
+              SYNTAX:
+              useEffect(() => {
+                // This code runs after every render
+
+                return () => {
+                // Cleanup code here
+                // This code runs on component unmount or before a re-run of effect
+                };
+              }, [dependencies]);
+                        
+              useEffect(function, [dependencies])
+
+              1. useEffect(() => {func})          // Runs after every Re-render
+              2. useEffect(() => {func}, [])      // Runs only on Mount
+              3. useEffect(() => {func}, [value]) // Runs on Mount + when value changes
+
+              USES:
+              #1 Event Listeners
+              #2 DOM Manipulations
+              #3 Subscriptions (real-time updates)
+              #4 Fetching Data from an API
+              #5 Clean up when a component unmounts
+
+# useContext() =  React Hook that allows you to share values between multiple levels of components without
+                passing props through each level (it is used to solve 'prop drilling')
+
+                PROVIDER COMPONENT:
+                        1. import { createContext } from 'react';
+                        2. export const MyContext = createContext();
+                        3. <MyContext.Provider value={value}>
+                                <Child />
+                           </MyContext.Provider>
+
+                CONSUMER COMPONENT:
+                        1. import { useContext } from 'react';
+                           import { MyContext } from './ComponentA';
+                        2. const value = useContext( MyContext );
+
+# useRef() = "Use Reference" does not cause re-renders when its value change.
+           When you want some component to "remember" some information,
+           but you don't want that information to trigger new re-renders.
+
+           1. Accessing / interacting with the DOM elements.
+           2. Handling focus, Animations, and Transitions.
+           3. Managing Timers and Intervals.
+
+# Updater function = A function passed as an argument to setState() (usually)
+                   for ex. setYear(year + 1) // wont work when used more than once in a function
+                           setYear(y => y + 1) // here y is the previous state of year
+                           small names like 'y' can only be used in updater fxns
+
+                   Allow for safe updates based on the previous state
+                   Used with multiple state updates and asynchronous functions
+                   Good practice to use updater functions
+
+# Spread operator (...) = used to include all values of the object or array at the place 
+                        ex: ...car
+
+# Object Destrcturing = Allows you to extract properties from objects and bind them to
+                      variables in a more concise and readable way.
+                      
+                      ex:
+                      const { firstName, lastName, age, city } = person;
+
+                      const { firstName: fName, lastName: lName } = person; ---> Renaming variables
+
+                      const { firstName, lastName, age, city, country = 'USA' } = person; ---> Default values
+
+                      const { name, position, company: { name: companyName, location } } = employee; ---> Destructuring nested objects
+                      
+REACT SNIPPETS :
+
+imrse - import useState with useEffect
+
+rafce - React arrow function export component
+
+rafcp - React arrow function export component with prototypes
+
+cc - class component
+
+ccc - class component with constructor
+
+imrr - import browser router with route and navlink
+
+imbrc - import router setup
+
+uef - useEffect Hook
+
+ucb - useCallback Hook
+
+usf - useState Hook

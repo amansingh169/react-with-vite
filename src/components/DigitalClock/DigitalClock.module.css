@@ -1,0 +1,18 @@
+.clockContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  background: url("mc4.jpg") top / cover no-repeat;
+
+  .clock {
+    padding: 50px 200px;
+    mask-image: radial-gradient(black, black, transparent, transparent);
+    backdrop-filter: blur(10px);
+
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: monospace;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  }
+}

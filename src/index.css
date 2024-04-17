@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+h2 {
+  color: deepskyblue;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  margin-inline: auto;
+  padding: 20px;
+
+  img {
+    width: 40px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-ul {
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+ol {
+  list-style-position: inside;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+#food {
+  margin-top: 50px;
+}
+
+#footer {
+  background-color: rgb(26, 26, 26);
+}
+
+.agents-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  width: 980px;
+  margin-block: 20px;
+  margin-inline: auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 20px;
+  width: 300px;
+
+  border: 2px solid #ff4454;
+  border-radius: 20px;
+  /* box-shadow: 0 0 0 2px deepskyblue; */
+  background-color: rgb(54, 54, 54);
+
+  h2 {
+    margin-top: 10px;
+    color: #ff4454;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .pic-container {
+    width: 100px;
+    aspect-ratio: 1;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 100%;
+    }
+  }
+}
+
+.log-greeting {
+  position: absolute;
+  width: 100%;
+  background-color: green;
+  color: white;
+  border-radius: 0 0 10px 10px;
+}
+.log-message {
+  width: 100%;
+  background-color: red;
+  color: white;
+  border-radius: 0 0 10px 10px;
+}
+
+.weapon-sec {
+  text-align: left;
+}
+ul {
+  list-style: none;
+}
+
+.color-picker-container {
+  padding: 20px;
+  margin-block: 30px;
+  background-color: rgba(0, 0, 0, 0.144);
+
+  .color-display {
+    display: grid;
+    place-content: center;
+    width: 400px;
+    aspect-ratio: 1;
+
+    margin-block: 20px;
+    margin-inline: auto;
+    border-radius: 20px;
+
+    transition: all 0.2 ease;
+  }
+
+  p,
+  label {
+    font-family: monospace;
+    font-size: 1.2rem;
+  }
+
+  p {
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.219);
+  }
+}
+
+input[type="color"] {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+}
+
+.rainbow-text {
+  animation: rainbow 5s ease infinite forwards;
+}
+@keyframes rainbow {
+  0% {
+    color: crimson;
+  }
+  20% {
+    color: greenyellow;
+  }
+  40% {
+    color: deepskyblue;
+  }
+  60% {
+    color: deeppink;
+  }
+  80% {
+    color: yellow;
+  }
+  100% {
+    color: crimson;
+  }
+}
