@@ -28,6 +28,8 @@ import fade from './assets/fade.jpg'
 import sage from './assets/sage.jpg'
 import sageAlt from './assets/sage-alt.png'
 
+import grunge from './assets/grunge.jpg'
+
 function App() {
   // object of arrays
   // use array of objects for complex and dynamic data
@@ -85,7 +87,7 @@ function App() {
 
       <Car_list />
 
-      <StopWatch />
+      <StopWatch texture = {grunge} />
 
       <ToDoList />
       

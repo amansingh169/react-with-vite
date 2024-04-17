@@ -2,14 +2,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
   width: 600px;
-  border: 2px solid black;
   border-radius: 10px;
   margin-inline: auto;
   margin-block: 30px;
   padding: 30px;
   gap: 40px;
 
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.384);
+  background-color: transparent;
+  overflow: hidden;
   font-family: monospace;
 
   .displayTime {
@@ -18,14 +21,15 @@
     color: rgb(0, 163, 0);
     padding: 20px;
     border-radius: 30px;
-    /* background-color: rgb(54, 54, 54); */
     background: linear-gradient(to bottom, rgb(54, 54, 54) 45%, darkgreen 55%) top / 100% 5px;
+    filter: blur(0.7px);
 
-    animation: bg-pan 5s linear infinite;
+    animation: bg-pan 5s linear infinite, bg-flicker 1s linear infinite;
   }
 
   .btnWrapper {
     display: flex;
+    position: relative;
     width: 400px;
     gap: 10px;
     margin-top: 10px;
@@ -35,10 +39,13 @@
     padding: 10px 20px;
     margin: 0;
     flex-basis: 100%;
-    border: 2px solid black;
+    border: none;
     border-radius: 5px;
 
     font-family: monospace;
+  }
+  .watchBtn:hover {
+    opacity: 0.6;
   }
 }
 
@@ -60,4 +67,49 @@
   to {
     background-position: 0 100%;
   }
+}
+
+@keyframes bg-flicker {
+  0% {
+    opacity: 1;
+  }
+  9% {
+    opacity: 0.5;
+  }
+  10% {
+    opacity: 0.5;
+  }
+  11% {
+    opacity: 0.9;
+  }
+  39% {
+    opacity: 0.8;
+  }
+  40% {
+    opacity: 0.3;
+  }
+  42% {
+    opacity: 0.8;
+  }
+  69% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  71% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.grunge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 600px;
+  mix-blend-mode: color-dodge;
+  opacity: 0.06;
 }
